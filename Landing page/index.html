@@ -7,6 +7,61 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container"></div>
+    <div class="ball"></div>
+    <section>
+      <header>
+        <nav>
+          <a href="#"><img src="images/logo2.jpeg" alt="" /></a>
+
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container">
+        <div class="content">
+          <h1>Shop <span>Cupcakes</span></h1>
+          <h2>Order Cupcakes for your party</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            molestias odio corrupti excepturi tempore quidem! Hic in qui quod,
+            quidem pariatur mollitia, eveniet exercitationem nisi, obcaecati
+            rerum minus dicta error!
+          </p>
+          <a href="#">Order Now</a>
+        </div>
+        <div class="products">
+          <img src="images/c1.jpg" class="cupcake" />
+        </div>
+        <ul class="click">
+          <img
+            src="images/c1.jpg"
+            onclick="imgSlider('images/c1.jpg');changeColor(color)"
+          />
+          <img
+            src="images/c2.jpg"
+            onclick="imgSlider('images/c2.jpg');changeColor(color)"
+          />
+          <img
+            src="images/c3.jpg"
+            onclick="imgSlider('images/c3.jpg');changeColor(color)"
+          />
+        </ul>
+      </div>
+
+      <script type="text/javascript">
+        function imgSlider(anything) {
+          document.querySelector(".cupcake").src = anything;
+        }
+        function changeColor(color) {
+          const ball = document.querySelector(".ball");
+          ball.style.background = color;
+        }
+      </script>
+    </section>
   </body>
 </html>
